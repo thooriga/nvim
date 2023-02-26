@@ -59,6 +59,9 @@ require("lazy").setup({
           dependencies = {
               'kyazdani42/nvim-web-devicons',
           }
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim"
     }
 })
 
