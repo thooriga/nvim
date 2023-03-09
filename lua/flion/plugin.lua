@@ -45,6 +45,12 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" }
     },
     {
+        "mbbill/undotree"
+    },
+    {
+        "theprimeagen/harpoon"
+    },
+    {
         'rose-pine/neovim',
         name = 'rose-pine',
         lazy = false,
@@ -55,10 +61,10 @@ require("lazy").setup({
         end
     },
     {
-          "nvim-lualine/lualine.nvim",
-          dependencies = {
-              'kyazdani42/nvim-web-devicons',
-          }
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            'kyazdani42/nvim-web-devicons',
+        }
     },
     {
         "lukas-reineke/indent-blankline.nvim"
