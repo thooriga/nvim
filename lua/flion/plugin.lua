@@ -12,7 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "folke/which-key.nvim",
+    {
+        "folke/which-key.nvim",
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
@@ -38,6 +40,19 @@ require("lazy").setup({
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
         }
+    },
+    {
+        "windwp/nvim-autopairs",
+        opts = {
+            fast_wrap = {},
+            disable_filetype = { "TelescopePrompt", "vim" },
+        },
+        config = function(_, opts)
+            require("nvim-autopairs").setup(opts)
+
+            local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+            require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
+        end,
     },
     {
         "nvim-telescope/telescope.nvim",
