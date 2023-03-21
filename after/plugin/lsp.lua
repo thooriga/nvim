@@ -63,6 +63,15 @@ end)
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true
+    virtual_text = true,
+    update_in_insert = true,
+    float = {
+        focusable = true,
+        style = "minimal",
+        source = "always",
+        header = "",
+        prefix = "",
+        border = "rounded"
+    }
 })
 
