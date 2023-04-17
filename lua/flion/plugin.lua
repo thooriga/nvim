@@ -55,9 +55,15 @@ require("lazy").setup({
         end,
     },
     {
+        "windwp/nvim-ts-autotag"
+    },
+    {
         "nvim-telescope/telescope.nvim",
         branch = "0.1.x",
         dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    {
+        "tpope/vim-fugitive"
     },
     {
         "mbbill/undotree"
